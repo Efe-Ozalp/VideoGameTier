@@ -8,12 +8,22 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var gameName:String = ""
+    
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("Video Game Tierlist Maker")
+                .font(.largeTitle)
+                .bold()
+            TextField("Enter Game Name", text: $gameName)
+                .padding()
+                .background(Color(.systemGray6))
+                .cornerRadius(8)
+            Button("Save Ranking")
+            {
+                //Save to firebase
+            }
+            
         }
         .padding()
     }
