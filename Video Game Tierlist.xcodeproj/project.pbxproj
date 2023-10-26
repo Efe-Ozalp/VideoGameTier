@@ -14,9 +14,6 @@
 		E72738532AE8189200FF40AC /* Video_Game_TierlistTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72738522AE8189200FF40AC /* Video_Game_TierlistTests.swift */; };
 		E727385D2AE8189200FF40AC /* Video_Game_TierlistUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727385C2AE8189200FF40AC /* Video_Game_TierlistUITests.swift */; };
 		E727385F2AE8189200FF40AC /* Video_Game_TierlistUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E727385E2AE8189200FF40AC /* Video_Game_TierlistUITestsLaunchTests.swift */; };
-		E727386C2AE81C6800FF40AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E727386B2AE81C6800FF40AC /* GoogleService-Info.plist */; };
-		E727386D2AE81C6800FF40AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E727386B2AE81C6800FF40AC /* GoogleService-Info.plist */; };
-		E727386E2AE81C6800FF40AC /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E727386B2AE81C6800FF40AC /* GoogleService-Info.plist */; };
 		E72738712AE81E8E00FF40AC /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = E72738702AE81E8E00FF40AC /* FirebaseAnalytics */; };
 		E72738732AE81E8E00FF40AC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = E72738722AE81E8E00FF40AC /* FirebaseAnalyticsOnDeviceConversion */; };
 		E72738752AE81E8E00FF40AC /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E72738742AE81E8E00FF40AC /* FirebaseAnalyticsSwift */; };
@@ -57,7 +54,6 @@
 		E72738582AE8189200FF40AC /* Video Game TierlistUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Video Game TierlistUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E727385C2AE8189200FF40AC /* Video_Game_TierlistUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video_Game_TierlistUITests.swift; sourceTree = "<group>"; };
 		E727385E2AE8189200FF40AC /* Video_Game_TierlistUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video_Game_TierlistUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		E727386B2AE81C6800FF40AC /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +117,6 @@
 				E72738412AE8189000FF40AC /* Video_Game_TierlistApp.swift */,
 				E72738432AE8189000FF40AC /* ContentView.swift */,
 				E72738452AE8189200FF40AC /* Assets.xcassets */,
-				E727386B2AE81C6800FF40AC /* GoogleService-Info.plist */,
 				E72738472AE8189200FF40AC /* Preview Content */,
 			);
 			path = "Video Game Tierlist";
@@ -273,7 +268,6 @@
 			files = (
 				E72738492AE8189200FF40AC /* Preview Assets.xcassets in Resources */,
 				E72738462AE8189200FF40AC /* Assets.xcassets in Resources */,
-				E727386C2AE81C6800FF40AC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -281,7 +275,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E727386D2AE81C6800FF40AC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -289,7 +282,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E727386E2AE81C6800FF40AC /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
