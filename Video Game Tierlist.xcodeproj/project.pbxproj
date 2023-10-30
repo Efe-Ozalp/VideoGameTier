@@ -10,6 +10,8 @@
 		E717D0112AEAB9D000105E38 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D0102AEAB9D000105E38 /* DisplayView.swift */; };
 		E717D0122AEAB9D000105E38 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D0102AEAB9D000105E38 /* DisplayView.swift */; };
 		E717D0132AEAB9D000105E38 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E717D0102AEAB9D000105E38 /* DisplayView.swift */; };
+		E717D01A2AEAC5D900105E38 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = E717D0192AEAC5D900105E38 /* FirebaseFirestore */; };
+		E717D01C2AEAC5D900105E38 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = E717D01B2AEAC5D900105E38 /* FirebaseFirestoreSwift */; };
 		E72738422AE8189000FF40AC /* Video_Game_TierlistApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72738412AE8189000FF40AC /* Video_Game_TierlistApp.swift */; };
 		E72738442AE8189000FF40AC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72738432AE8189000FF40AC /* ContentView.swift */; };
 		E72738462AE8189200FF40AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E72738452AE8189200FF40AC /* Assets.xcassets */; };
@@ -78,7 +80,9 @@
 				E72738772AE81E8E00FF40AC /* FirebaseAppCheck in Frameworks */,
 				E72738752AE81E8E00FF40AC /* FirebaseAnalyticsSwift in Frameworks */,
 				E72738712AE81E8E00FF40AC /* FirebaseAnalytics in Frameworks */,
+				E717D01A2AEAC5D900105E38 /* FirebaseFirestore in Frameworks */,
 				E72738732AE81E8E00FF40AC /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
+				E717D01C2AEAC5D900105E38 /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +103,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E717D0142AEAC56E00105E38 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E72738352AE8189000FF40AC = {
 			isa = PBXGroup;
 			children = (
@@ -106,6 +117,7 @@
 				E72738512AE8189200FF40AC /* Video Game TierlistTests */,
 				E727385B2AE8189200FF40AC /* Video Game TierlistUITests */,
 				E727383F2AE8189000FF40AC /* Products */,
+				E717D0142AEAC56E00105E38 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -184,6 +196,8 @@
 				E727387E2AE81E8E00FF40AC /* FirebaseInstallations */,
 				E72738802AE81E8E00FF40AC /* FirebaseRemoteConfig */,
 				E72738822AE81E8E00FF40AC /* FirebaseStorage */,
+				E717D0192AEAC5D900105E38 /* FirebaseFirestore */,
+				E717D01B2AEAC5D900105E38 /* FirebaseFirestoreSwift */,
 			);
 			productName = "Video Game Tierlist";
 			productReference = E727383E2AE8189000FF40AC /* Video Game Tierlist.app */;
@@ -641,6 +655,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		E717D0192AEAC5D900105E38 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E727386F2AE81E8E00FF40AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
+		E717D01B2AEAC5D900105E38 /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E727386F2AE81E8E00FF40AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
 		E72738702AE81E8E00FF40AC /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = E727386F2AE81E8E00FF40AC /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
