@@ -17,17 +17,40 @@ struct Game: Identifiable {
 
 struct DisplayView: View {
     @State private var games: [Game] = []
-   
+    
     var body: some View {
         VStack {
+            HStack{
+                Text("Video Game Tierlist")
+                    .font(.title)
+                    .bold()
+                    .foregroundColor(.blue)
+                Image(systemName: "gamecontroller.fill")
+                    .foregroundColor(.blue)
+            }
+            Spacer(minLength: 8)
+            HStack{
+                Text("  Game Name")
+                    .font(.title3)
+                    .bold()
+                    .foregroundColor(.blue)
+                Spacer()
+                Text("Tier Ranking  ")
+                    .font(.title3)
+                    .bold()
+                    .foregroundColor(.blue)
+            }
+            
             ScrollView {
+                
                 ForEach(games) { game in
                     HStack {
                         Text(game.name)
                         Spacer()
                         Text("Tier \(game.rank)")
+                            .bold()
                     }
-                    .padding()
+                    .padding(10)
                 }
             }
             .onAppear(perform: fetchGames)
@@ -36,7 +59,7 @@ struct DisplayView: View {
     
     func fetchGames() {
         let db = Firestore.firestore()
-
+        
         db.collection("gameRankings").order(by: "rank").order(by: "gameName").getDocuments { (querySnapshot, error) in
             if let error = error {
                 print("Error getting documents: \(error)")
@@ -48,13 +71,13 @@ struct DisplayView: View {
                     let id = document.documentID
                     let gameName = data["gameName"] as? String ?? ""
                     let rank = data["rank"] as? String ?? ""
-                
+                    
                     return Game(id: id, name: gameName, rank: rank)
                 }
             }
         }
     }
-
+    
 }
 
 struct DisplayView_Previews: PreviewProvider {

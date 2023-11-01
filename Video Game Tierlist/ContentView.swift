@@ -32,59 +32,75 @@ struct ContentView: View {
     @State private var gameName:String = ""
     
     var body: some View {
-        VStack {
-            
-            var displayMessage: String {
+        NavigationView {
+            VStack {
+                
+                var displayMessage: String {
                     if gameName.isEmpty {
                         return "Please enter a game name."
                     } else {
                         return "You ranked \(gameName) as Tier \(selectedLetter). Confirm?"
                     }
                 }
-            
-            Text("Video Game Tierlist Maker")
-                .font(.largeTitle)
-                .bold()
-            HStack {
-                TextField("Enter Game Name", text: $gameName)
+                
+                Text("Video Game Tierlist Maker")
+                    .font(.largeTitle)
+                    .bold()
+                HStack {
+                    TextField("Enter Game Name", text: $gameName)
+                        .padding()
+                        .background(Color(.systemGray6))
+                        .cornerRadius(8)
+                    Picker(selection: $selectedLetter, label: Text("Select a Letter")) {
+                        ForEach(letters, id: \.self) { letter in
+                            Text(letter).tag(letter)
+                        }
+                    }
+                    .pickerStyle(WheelPickerStyle())
+                    .frame(width: 100, height: 150, alignment: .center)
+                    
+                }
+                Text(displayMessage)
+                    .font(.largeTitle)
                     .padding()
-                    .background(Color(.systemGray6))
-                    .cornerRadius(8)
-                Picker(selection: $selectedLetter, label: Text("Select a Letter")) {
-                    ForEach(letters, id: \.self) { letter in
-                        Text(letter).tag(letter)
+                Button(action: {
+                    saveToFirebase()
+                }) {
+                    Text("Save Ranking")
+                        .font(.title)
+                        .bold()
+                        .foregroundColor(.white)
+                        .padding(20)
+                        .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(1), Color.green.opacity(1)]), startPoint: .top, endPoint: .bottom))
+                        .overlay(
+                            RoundedRectangle(cornerRadius:100)
+                                .stroke(Color.black.opacity(1), lineWidth: 5)
+                        )
+                        .cornerRadius(100)
+                    
+                }
+                .padding()
+                
+                NavigationLink(destination: DisplayView()) {   // <- Add NavigationLink
+                                    Text("Show Rankings")
+                                        .font(.title)
+                                        .bold()
+                                        .foregroundColor(.white)
+                                        .padding(20)
+                                        .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(1), Color.orange.opacity(1)]), startPoint: .top, endPoint: .bottom))
+                                        .cornerRadius(100)
+                                }
+                                .padding()
+
+                            }
+                            .padding()
+                        }
                     }
                 }
-                .pickerStyle(WheelPickerStyle())
-                .frame(width: 100, height: 150, alignment: .center)
-                
-            }
-            Text(displayMessage)
-                            .font(.largeTitle)
-                            .padding()
-            Button(action: {
-                saveToFirebase()
-            }) {
-                Text("Save Ranking")
-                    .font(.title)
-                    .bold()
-                    .foregroundColor(.white)
-                    .padding(20)
-                    .background(LinearGradient(gradient: Gradient(colors: [Color.blue.opacity(1), Color.green.opacity(1)]), startPoint: .top, endPoint: .bottom))
-                    .overlay(
-                        RoundedRectangle(cornerRadius:100)
-                            .stroke(Color.black.opacity(1), lineWidth: 5)
-                    )
-                    .cornerRadius(100)
-                   
-            }
-            .padding()
-            
-            
-        }
-        .padding()
-    }
-}
+
+                // ... [Rest of the code for ContentView_Previews]
+               
+
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
