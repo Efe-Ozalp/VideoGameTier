@@ -21,9 +21,6 @@ struct DisplayView: View {
     var body: some View {
         VStack {
             ScrollView {
-                Button("Hello") {
-                    fetchGames()
-                }
                 ForEach(games) { game in
                     HStack {
                         Text(game.name)
