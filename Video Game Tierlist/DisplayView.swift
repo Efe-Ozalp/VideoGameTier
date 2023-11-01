@@ -82,6 +82,7 @@ struct DisplayView: View {
 
 struct DisplayView_Previews: PreviewProvider {
     static var previews: some View {
-        DisplayView()
+        ContentView()
     }
 }
+
